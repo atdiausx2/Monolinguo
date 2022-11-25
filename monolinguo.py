@@ -1,8 +1,9 @@
 import dash
-import dash_core_components as dcc
+# import dash_core_components as dcc
 import pandas as pd
-import dash_html_components as html
-
+from dash import dcc
+# import dash_html_components as html
+from dash import html
 
 # // todo: @games_played and @XP should be loaded at least from config (TOML?) file
 class Monolinguo(object):
@@ -11,11 +12,23 @@ class Monolinguo(object):
         self.XP = 0
         self.games_played = 0
 
-    def constructInterface(self, app):
+    def constructLayout(self, app):
+        app.layout = html.Div([])
         pass
 
     def run(self):
+        external_stylesheets = [
+            { "href": "",
+              "rel": ""}
+        ]
+        app = dash.Dash(__name__
+                        # external_stylesheets = external_stylesheets
+                        )
+        self.constructLayout(app)
 
-        app = dash.Dash(__name__)
-        self.constructInterface(app)
+        app.title = Monolinguo
+        app.run_server(debug=True)
+        # fixme: turn this off if not intending to deploy
+        # server = app.server
+
     pass
