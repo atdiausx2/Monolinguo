@@ -30,5 +30,5 @@ class Monolinguo(object):
         app.run_server(debug=True)
         # fixme: turn this off if not intending to deploy
         server = app.server
-
+        self.server = app.server
     pass
