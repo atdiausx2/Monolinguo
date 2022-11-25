@@ -29,6 +29,6 @@ class Monolinguo(object):
         app.title = Monolinguo
         app.run_server(debug=True)
         # fixme: turn this off if not intending to deploy
-        # server = app.server
+        server = app.server
 
     pass
