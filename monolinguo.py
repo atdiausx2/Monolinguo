@@ -11,24 +11,3 @@ class Monolinguo(object):
         self.user_name = username
         self.XP = 0
         self.games_played = 0
-
-    def constructLayout(self, app):
-        app.layout = html.Div([])
-        pass
-
-    def run(self):
-        external_stylesheets = [
-            { "href": "",
-              "rel": ""}
-        ]
-        app = dash.Dash(__name__
-                        # external_stylesheets = external_stylesheets
-                        )
-        self.constructLayout(app)
-
-        app.title = Monolinguo
-        app.run_server(debug=True)
-        # fixme: turn this off if not intending to deploy
-        server = app.server
-        self.server = app.server
-    pass
